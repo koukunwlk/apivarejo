@@ -50,3 +50,29 @@ form input[type= "button"]{
 form input[type= "button"]:hover{
     background-color: rgba(0, 0, 0, 0.3);
 }
+
+.modal{
+    visibility: hidden;
+}
+
+.modal.active{
+    transition: 200ms;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    visibility: visible;
+}
+
+
+
+.modal-content{
+    color: white;
+    text-align: center;
+    margin-top: 300px;
+}
+.modal-content span{
+    font-size: 80px;
+    line-height: 100px;
+}

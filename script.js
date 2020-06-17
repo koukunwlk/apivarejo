@@ -13,10 +13,10 @@ document.querySelector("#submit").addEventListener("click",()=> {
 
         
 
-}).then(r =>  r.json().then(data => ({status: r.status, body: data})))
-.then(obj => console.log(obj)).catch(function(err){
-    console.log("Deu um erro aqui ó", err)
-})
-    console.log(login)
-
+}).then((data)=>{
+    console.log(data.status)
+    if(data.status == 200){
+        document.querySelector('.modal').classList.add('active')
+    }
+}).catch((err)=>{console.log(err)})
 })
